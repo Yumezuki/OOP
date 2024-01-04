@@ -3,14 +3,29 @@ public class Account {
     public String name;
     
     public void deposit(double b) {
-        
+        if (b >= 0) {
+            balance += b;
+        } else {
+            System.out.println("The balance variable must be greater than or equal to zero.");
+        }
     }
     
     public double withdraw(double b) {
-        return 0;
+        if (b >= 0) {
+            if (balance < b){
+                System.out.println("Your account balance is insufficient.");
+                return 0;
+            } else {
+                return balance -= b;
+            }
+        } else {
+            System.out.println("The balance variable must be greater than or equal to zero.");
+            return 0;
+
+        }
     }
     
     public void showInfo() {
-        
+        System.out.println("In " + name + " account, there is a balance equal to " + balance + " bath.");
     }
 }
