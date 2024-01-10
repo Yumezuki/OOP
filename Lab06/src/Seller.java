@@ -1,10 +1,12 @@
 public class Seller extends Employee {
     public Food sell(Employee e) {
+        Wallet who = e.getWallet();
+        Wallet self = this.getWallet();
         Food f = new Food();
         
-        if (e.getWallet().getBalance() >= Food.getPrice()) {
-            this.getWallet().setBalance(this.getWallet().getBalance() + Food.getPrice());
-            e.getWallet().setBalance(e.getWallet().getBalance() - Food.getPrice());
+        if (who.getBalance() >= Food.getPrice()) {
+            self.setBalance(self.getBalance() + Food.getPrice());
+            who.setBalance(who.getBalance() - Food.getPrice());
             return f;
         } else {
             System.out.println("Your money is not enough.");
