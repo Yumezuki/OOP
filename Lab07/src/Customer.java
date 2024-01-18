@@ -6,15 +6,19 @@ public class Customer {
     public Customer() {}
     
     public Customer(String firstName, String lastName) {
-    
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.acct = null;
     }
     
     public Customer(String firstName, String lastName, CheckingAccount acct) {
-    
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.acct = acct;
     }
     
     public void setFirstName(String firstName) {
-        
+        this.firstName = firstName;
     }
     
     public String getFirstName() {
@@ -22,7 +26,7 @@ public class Customer {
     }
     
     public void setLastName(String lastName) {
-        
+        this.lastName = lastName;
     }
     
     public String getLastName() {
@@ -30,7 +34,7 @@ public class Customer {
     }
     
     public void setAcct(CheckingAccount acct) {
-        
+        this.acct = acct;
     }
     
     public CheckingAccount getAcct() {
@@ -39,10 +43,14 @@ public class Customer {
     
     @Override
     public String toString() {
-        return "";
+        if (acct == null) {
+            return firstName + lastName + " dosen't have account.";
+        } else {
+            return "The " + this.getFirstName() + " account has " + this.getAcct().getBalance() + " baht and " + this.getAcct().getCredit() + " Credits.";
+        }
     }
     
     public boolean equals(Customer c) {
-        return false;
+        return (this.getFirstName() + this.getLastName()).equals(c.getFirstName() + c.getLastName());
     }
 }

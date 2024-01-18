@@ -10,16 +10,16 @@ public class Account {
     public void deposit(double a) {
         if (a > 0) {
             this.balance += a;
-            System.out.println(a + "baht is deposited to " + name);
+            System.out.println(a + " baht is deposited to " + name + ".");
         } else {
             System.out.println("Input number must be a positive integer.");
         }
     }
     
     public void withdraw(double a) {
-        if (a > 0 & (balance - a) > 0) {
+        if (a > 0 && (balance - a) > 0) {
             this.balance -= a;
-            System.out.println(a + " baht is withdraw from " + name);
+            System.out.println(a + " baht is withdraw from " + name + ".");
         } else if (a < 0) {
             System.out.println("Input number must be a positive integer.");
         } else if (balance - a < 0) {
@@ -44,6 +44,6 @@ public class Account {
     }
     
     public void showAccount() {
-        System.out.println(name + " account has " + balance + " baht.");
+        System.out.println(this.getName() + " account has " + this.getBalance() + " baht.");
     }
 }
