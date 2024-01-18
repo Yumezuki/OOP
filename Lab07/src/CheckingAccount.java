@@ -1,5 +1,5 @@
 public class CheckingAccount extends Account {
-    double credit;
+    private double credit;
     
     public CheckingAccount(){
         super(0.0, "");
@@ -36,7 +36,7 @@ public class CheckingAccount extends Account {
             }
         }
         if (check) {
-            System.out.println(a + " baht is withdraw from " + this.getName() + " and your credit balance is " + this.getCredit() + ".");
+            System.out.println(a + " baht is withdrawn from " + this.getName() + " and your credit balance is " + this.getCredit() + ".");
         } else {
             System.out.println("Not enough money!");
         }
@@ -48,6 +48,6 @@ public class CheckingAccount extends Account {
     
     @Override
     public String toString() {
-        return "The " + this.getName() + " account has " + this.getBalance() + " baht and " + this.getCredit() + " credits.";
+        return "The " + this.getName() + " account has " + this.getBalance() + " baht and " + this.getCredit() + " Credits.";
     }
 }

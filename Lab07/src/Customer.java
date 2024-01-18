@@ -44,13 +44,13 @@ public class Customer {
     @Override
     public String toString() {
         if (acct == null) {
-            return firstName + lastName + " dosen't have account.";
+            return firstName + lastName + " doesn’t have account.";
         } else {
-            return "The " + this.getFirstName() + " account has " + this.getAcct().getBalance() + " baht and " + this.getAcct().getCredit() + " Credits.";
+            return "The " + this.getFirstName() + " account has " + this.getAcct().getBalance() + " baht and " + this.getAcct().getCredit() + " credits.";
         }
     }
     
     public boolean equals(Customer c) {
-        return (this.getFirstName() + this.getLastName()).equals(c.getFirstName() + c.getLastName());
+        return (this.getFirstName() + " " + this.getLastName()).equals(c.getFirstName() + " " + c.getLastName());
     }
 }
