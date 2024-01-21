@@ -1,12 +1,11 @@
 public class Pigeous extends Bird{
     public Pigeous(){
         this("", 0);
-        super.setPower(150);
+        this.setPower(150);
     }
     
     public Pigeous(String name, int age){
         super(name, age);
-        super.setPower(150);
     }
     
     @Override
