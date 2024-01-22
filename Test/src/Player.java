@@ -59,9 +59,9 @@ public class Player {
     }
     
     public void attack(Player target, Spell spell){
-        if (this.getHouses() instanceof Gryffindor) {
-            ((Gryffindor)this.getHouses()).attackSpell(this, target, spell);
-        } else if (this.getHouses() instanceof Hufflepuff) {
+        if (houses instanceof Gryffindor) {
+            ((Gryffindor)houses).attackSpell(this, target, spell);
+        } else if (houses instanceof Hufflepuff) {
             ((Hufflepuff)this.getHouses()).attackSpell(this, target, spell);
         }
         if (target.getHP() == 0){
@@ -74,10 +74,10 @@ public class Player {
     }
     
     public void protectFromPlayer(Player target){
-        if (this.getHouses() instanceof Gryffindor) {
-            ((Gryffindor)this.getHouses()).defense(this, target);
-        } else if (this.getHouses() instanceof Hufflepuff) {
-            ((Hufflepuff)this.getHouses()).defense(this, target);
+        if (houses instanceof Gryffindor) {
+            ((Gryffindor)houses).defense(this, target);
+        } else if (houses instanceof Hufflepuff) {
+            ((Hufflepuff)houses).defense(this, target);
         }
     }
     
