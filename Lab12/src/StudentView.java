@@ -1,6 +1,8 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
 
 public class StudentView implements ActionListener, WindowListener {
@@ -69,8 +71,10 @@ public class StudentView implements ActionListener, WindowListener {
             txt_name.setText(std.getName() + "");
             txt_money.setText(std.getMoney() + "");
             }
-            catch (Exception e) {
+            catch (IOException e) {
                 System.out.println(e);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(StudentView.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
@@ -79,9 +83,12 @@ public class StudentView implements ActionListener, WindowListener {
     public void windowClosing(WindowEvent we) {
         try (FileOutputStream fos = new FileOutputStream("StudentM.dat");
                 ObjectOutputStream oos = new ObjectOutputStream(fos);) {
+            std.setID(Integer.parseInt(txt_id.getText()));
+            std.setName(txt_name.getText());
+            std.setMoney(Integer.parseInt(txt_money.getText()));
             oos.writeObject(std);
         }
-        catch (Exception e) {
+        catch (IOException e) {
             System.out.println(e);
         }
     }

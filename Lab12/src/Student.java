@@ -1,4 +1,6 @@
-public class Student {
+import java.io.*;
+
+public class Student implements Serializable{
     private String name;
     private int ID;
     private int money;
@@ -36,4 +38,6 @@ public class Student {
     public void setMoney(int money) {
         this.money = money;
     }
+    
+    
 }
