@@ -54,8 +54,8 @@ public class MainPage extends javax.swing.JFrame {
         name_id5 = new javax.swing.JLabel();
         status = new javax.swing.JPanel();
         txt_checking = new javax.swing.JLabel();
-        txt_empty = new javax.swing.JLabel();
         txt_wait = new javax.swing.JLabel();
+        txt_empty = new javax.swing.JLabel();
         area_q = new javax.swing.JLabel();
         deadline = new javax.swing.JPanel();
         txt_people = new javax.swing.JLabel();
@@ -65,9 +65,7 @@ public class MainPage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("N-Queue");
-        setMaximumSize(new java.awt.Dimension(1200, 700));
         setMinimumSize(new java.awt.Dimension(1200, 700));
-        setPreferredSize(new java.awt.Dimension(1200, 700));
         setSize(new java.awt.Dimension(1200, 700));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -327,18 +325,18 @@ public class MainPage extends javax.swing.JFrame {
 
         txt_checking.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         txt_checking.setForeground(new java.awt.Color(87, 65, 43));
-        txt_checking.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Ellipse 3.png"))); // NOI18N
+        txt_checking.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/stcheck.png"))); // NOI18N
         txt_checking.setText("Checking");
-
-        txt_empty.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        txt_empty.setForeground(new java.awt.Color(87, 65, 43));
-        txt_empty.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Ellipse 5.png"))); // NOI18N
-        txt_empty.setText("Empty");
 
         txt_wait.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         txt_wait.setForeground(new java.awt.Color(87, 65, 43));
-        txt_wait.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Ellipse 4.png"))); // NOI18N
+        txt_wait.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/stwait.png"))); // NOI18N
         txt_wait.setText("Wait");
+
+        txt_empty.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        txt_empty.setForeground(new java.awt.Color(87, 65, 43));
+        txt_empty.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/stempty.png"))); // NOI18N
+        txt_empty.setText("Empty");
 
         javax.swing.GroupLayout statusLayout = new javax.swing.GroupLayout(status);
         status.setLayout(statusLayout);
@@ -397,7 +395,7 @@ public class MainPage extends javax.swing.JFrame {
         mainLayout.setHorizontalGroup(
             mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainLayout.createSequentialGroup()
-                .addGap(854, 854, 854)
+                .addGap(863, 863, 863)
                 .addGroup(mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(deadline, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(queue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -407,9 +405,9 @@ public class MainPage extends javax.swing.JFrame {
             mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainLayout.createSequentialGroup()
                 .addComponent(deadline, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addGap(0, 0, 0)
                 .addComponent(queue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
         getContentPane().add(main, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 600));
